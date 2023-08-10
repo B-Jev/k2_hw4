@@ -22,7 +22,7 @@ public class CalkulatorService implements CalkulatorServiceImpl {
 
     public String divide(double num1, double num2) {
         if (num2 == 0) {
-            return "На ноль делить нельзя!!";
+            throw new IllegalStateException("На ноль делить нельзя!!");
         } else {
             return String.format("%s %s %s %s %s", num1, "/", num2, "=", num1 / num2);
         }
